@@ -26,7 +26,6 @@ To explore or run a specific project, please switch to the appropriate branch.
 
 #### Git (Command Line):
 
-```bash
 # Clone the repository
 git clone https://github.com/zafarfarhaan07/WHITE-Z4X.git
 
@@ -34,7 +33,7 @@ git clone https://github.com/zafarfarhaan07/WHITE-Z4X.git
 cd your-project-path
 
 # Switch to Machine Learning projects
-git checkout Machine-Learning-projects-using-small-datasets
+git checkout Machine-Learning-projects
 
 # Or switch to Web App projects
 git checkout Web-app-projects
