@@ -177,4 +177,4 @@ Acknowledgments
 Zafar Farhaan Z.H
 Email: zfarhaan68.com
 GitHub: github.com/zafarfarhaan07
-LinkedIn: https://in.linkedin.com/in/zafar-farhaan-a64756355
+LinkedIn: https://in.linkedin.com/in/zafar-farhaan
