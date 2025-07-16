@@ -153,7 +153,7 @@ A bilingual translation web application that translates text between Hindi and E
 
 Install required packages:
 
-*** bash ***
+***bash***
 pip install streamlit pandas datasets transformers torch
 
 ### Run the Application
