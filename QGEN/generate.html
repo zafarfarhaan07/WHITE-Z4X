@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate a Question</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="generate-page">
+    <div class="container">
+        <div class="dialog-box">
+            <h2>Enter your request:</h2>
+            <input type="text" id="subjectInput" placeholder="Example: Computer Science Part A generate 5 questions">
+            <button class="bubble" onclick="generateQuestion()">Generate</button>
+            <button class="bubble" onclick="goBack()">Back</button>
+        </div>
+        <div id="output" class="output-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

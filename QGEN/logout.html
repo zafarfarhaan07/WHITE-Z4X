@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Successful</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logout-container {
+            text-align: center;
+            padding: 30px;
+        }
+        .logout-icon {
+            font-size: 4rem;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        .logout-message {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        .browser-instructions {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body class="index-page">
+    <div class="container logout-container">
+        <div class="logout-icon">✓</div>
+        <h1>Logout Successful</h1>
+        <div class="logout-message">
+            <p>You have been securely logged out of the system.</p>
+        </div>
+        
+        <button class="bubble" onclick="attemptClose()">Close Application</button>
+        
+        <div class="browser-instructions">
+            <h3>Can't close automatically?</h3>
+            <p>Due to browser security settings, some browsers prevent automatic closing.</p>
+            <p><strong>Please:</strong></p>
+            <ul>
+                <li>On Windows/Linux: Press Ctrl+W or click the X on the tab</li>
+                <li>On Mac: Press Command+W or click the X on the tab</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function attemptClose() {
+            try {
+                window.close();
+            } catch (e) {
+                // If closing fails, highlight the instructions
+                document.querySelector('.browser-instructions').style.backgroundColor = '#fff3cd';
+                document.querySelector('.browser-instructions').style.border = '1px solid #ffeeba';
+            }
+        }
+        
+        // Try to close after 5 seconds if no interaction
+        setTimeout(attemptClose, 5000);
+    </script>
+</body>
+</html>

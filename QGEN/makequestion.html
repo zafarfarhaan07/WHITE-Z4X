@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Question</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="makequestion-page">
+    <div class="container">
+        <h1>Make a Question</h1>
+        <textarea id="questionInput" placeholder="Type your question here..." rows="5"></textarea>
+        <div class="button-sequence">
+            <button class="bubble" id="printBtn">Print</button>
+            <button class="bubble" onclick="goBack()">Back</button>
+        </div>
+    </div>
+    <script src="makequestion.js"></script>
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

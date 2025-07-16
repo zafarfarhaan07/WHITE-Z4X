@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSM Institute of Engineering and Technology</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="index-page">
+  <div class="container">
+    <h1>SSM Institute of Engineering and Technology</h1>
+    <div class="button-sequence">
+      <button class="bubble" id="subjectBtn">Subject</button>
+      <button class="bubble" id="generateBtn">Generate a Question</button>
+      <button class="bubble" id="answerKeyBtn">Answer Key</button>
+      <button class="bubble" id="makeQuestionBtn">Make a Question</button>
+      <button class="bubble" id="logoutBtn">Log Out</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("makeQuestionBtn").addEventListener("click", () => {
+        window.location.href = "makequestion.html";
+    });
+  </script>
+</body>
+</html>

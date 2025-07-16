@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Key</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="answerkey-page">
+    <div class="container">
+        <h1>Answer Key</h1>
+        <div class="button-sequence">
+            <button class="bubble" onclick="showAnswerKey('cns')">Cryptography and Network Security</button>
+            <button class="bubble" onclick="showAnswerKey('csa')">Computer Science and Applications</button>
+            <button class="bubble" onclick="showAnswerKey('dip')">Digital Image Processing</button>
+        </div>
+        <div id="answerKeyOutput" class="output-box"></div>
+        <button class="bubble" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        // Answer Key Data
+        const answerKeys = {
+            cns: {
+                partA: [
+                    "Encryption",
+                    "DES",
+                    "Rivest-Shamir-Adleman",
+                    "Private key",
+                    "SHA (Secure Hash Algorithm)",
+                    "Man-in-the-middle attack",
+                    "Checksum, Hashing",
+                    "Traffic filtering, Access control",
+                    "HTTPS (Hypertext Transfer Protocol Secure)",
+                    "Steganography"
+                ],
+                partBC: [
+                    "Types of Cryptography – Symmetric, Asymmetric, Hashing",
+                    "Security Attacks – Phishing, Spoofing, Man-in-the-middle, Ransomware",
+                    "Affine Cipher – Mathematical function, Modulo operation",
+                    "Monoalphabetic & Polyalphabetic Cipher – Simple substitution, Vigenère cipher",
+                    "Blowfish & Twofish – Feistel structure, Key expansion",
+                    "DES, 3DES, AES – Block cipher, 64-bit/128-bit encryption",
+                    "RSA Algorithm – Prime numbers, Public-private key, Modulus",
+                    "ElGamal Cryptosystem – Discrete logarithm, Key exchange",
+                    "Digital Certificates – Public key, Certificate Authority (CA)",
+                    "Kerberos Authentication – Ticket Granting Ticket (TGT), Key Distribution Center (KDC)",
+                    "IPSec – Authentication Header (AH), Encapsulating Security Payload (ESP)",
+                    "VPN Security – Tunneling, Encryption",
+                    "Types of Malware – Virus, Worms, Trojan, Spyware",
+                    "Public Key Infrastructure (PKI) – Digital signatures, Hashing",
+                    "Elliptic Curve Cryptography (ECC) – Small key size, Faster encryption",
+                    "Quantum Cryptography – Qubits, Key distribution",
+                    "Blockchain Security – Hashing, Decentralization, Consensus",
+                    "SIEM – Log analysis, Event correlation",
+                    "Cloud Security – Data encryption, Access control",
+                    "Ransomware – Encryption, Decryption key, Ransom demand"
+                ]
+            },
+            csa: {
+                partA: [
+                    "CPU",
+                    "Stack",
+                    "Structured Query Language",
+                    "80",
+                    "Primary Key",
+                    "Object-Oriented Programming",
+                    "FTP (File Transfer Protocol)",
+                    "Local Area Network",
+                    "OOP (Object-Oriented Programming)",
+                    "Debugging"
+                ],
+                partBC: [
+                    "Types of OS – Windows, Linux, MacOS, Real-Time OS",
+                    "CPU Scheduling – FCFS, Round Robin, Priority Scheduling",
+                    "Database Models – Hierarchical, Relational, NoSQL",
+                    "SQL vs NoSQL – Structured vs Unstructured, Scalability",
+                    "Sorting Algorithms – QuickSort, MergeSort, Bubble Sort",
+                    "Searching Algorithms – Binary Search, Linear Search",
+                    "Networking Models – OSI, TCP/IP",
+                    "Cloud Computing – IaaS, PaaS, SaaS",
+                    "Virtualization – Hypervisor, VM",
+                    "SDLC Models – Waterfall, Agile, Spiral",
+                    "Artificial Intelligence – Machine Learning, Neural Networks",
+                    "Machine Learning Types – Supervised, Unsupervised, Reinforcement",
+                    "Data Structures – Trees, Graphs, Linked Lists",
+                    "Cyber Security – Threats, Firewalls, Intrusion Detection",
+                    "IoT – Sensors, Smart devices, Connectivity",
+                    "Big Data – Hadoop, Data Analytics"
+                ]
+            },
+            dip: {
+                partA: [
+                    "Pixel",
+                    "RGB",
+                    "Discrete Cosine Transform",
+                    "Laplacian Transform",
+                    "Salt and Pepper Noise",
+                    "Peak Signal-to-Noise Ratio",
+                    "High-pass Filter",
+                    "Watershed Algorithm",
+                    "JPEG Compression",
+                    "Noise Reduction"
+                ],
+                partBC: [
+                    "Fundamental Steps in DIP – Image Acquisition, Preprocessing, Segmentation",
+                    "Histogram Equalization – Contrast Enhancement",
+                    "Frequency Domain Enhancement – Fourier Transform",
+                    "Low-pass & High-pass Filtering – Blurring, Edge Detection",
+                    "Noise Models – Gaussian, Salt and Pepper",
+                    "Edge Detection – Sobel, Prewitt, Canny",
+                    "Morphological Operations – Dilation, Erosion, Opening, Closing",
+                    "Segmentation Techniques – Thresholding, Clustering",
+                    "Image Compression – Lossless (Huffman, PNG), Lossy (JPEG)",
+                    "Wavelet Transform – Multi-resolution analysis",
+                    "Color Models – RGB, HSV, CMYK",
+                    "Hough Transform – Line detection",
+                    "Texture Analysis – Gabor Filters, Co-occurrence Matrices",
+                    "3D Image Processing – Depth Mapping, 3D Reconstruction",
+                    "Medical Imaging – MRI, CT Scan",
+                    "Pattern Recognition – Machine Learning, Neural Networks",
+                    "Remote Sensing – Satellite Imagery",
+                    "Steganography – LSB Encoding",
+                    "Watermarking – Digital Signatures, Ownership Protection",
+                    "Real-Time Processing – Latency, High-Speed Computation",
+                    "Quantum Computing in DIP – Qubit-based Image Processing"
+                ]
+            }
+        };
+
+        // Function to display answer key for a subject
+        function showAnswerKey(subject) {
+            const outputDiv = document.getElementById("answerKeyOutput");
+            const answerKey = answerKeys[subject];
+
+            if (answerKey) {
+                outputDiv.innerHTML = `<h3>Answer Key for ${subject.toUpperCase()}:</h3>`;
+                outputDiv.innerHTML += `<h4>Part A:</h4>`;
+                answerKey.partA.forEach((answer, index) => {
+                    outputDiv.innerHTML += `<p>${index + 1}. ${answer}</p>`;
+                });
+                outputDiv.innerHTML += `<h4>Part B & Part C:</h4>`;
+                answerKey.partBC.forEach((answer, index) => {
+                    outputDiv.innerHTML += `<p>${index + 1}. ${answer}</p>`;
+                });
+            } else {
+                outputDiv.innerHTML = `<p style="color:red;">No answer key available for this subject!</p>`;
+            }
+        }
+
+        // Function to go back to the main page
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

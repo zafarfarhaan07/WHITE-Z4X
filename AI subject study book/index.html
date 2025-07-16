@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Guide with Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Artificial Intelligence Study Guide</h1>
+
+        <!-- Topic and Question Selection -->
+        <label for="topicSelect">Select a topic:</label>
+        <select id="topicSelect">
+            <option value="" disabled selected>Choose a topic</option>
+            <option value="concepts">1. Concepts of AI</option>
+            <option value="history">2. History of AI</option>
+            <option value="trends">3. Current Trends of AI</option>
+            <option value="human_vs_machine">4. Human vs Machine</option>
+            <option value="anna_university">5. Anna University Asked Questions</option>
+        </select>
+
+        <div id="subTopicDiv" style="display: none;">
+            <label for="subTopicSelect">Select a question:</label>
+            <select id="subTopicSelect">
+                <option value="" disabled selected>Choose a question</option>
+            </select>
+        </div>
+
+        <!-- Answer Display Area -->
+        <div class="answer-area">
+            <p id="answer"></p>
+        </div>
+
+        <!-- Button to initiate the test -->
+        <button id="takeTestBtn">Wanna have test?</button>
+
+        <!-- Test Section -->
+        <div id="testSection" style="display: none;">
+            <label for="testInput">Enter your answer:</label>
+            <textarea id="testInput" rows="4" cols="50" placeholder="Write your answer here..."></textarea>
+            <button id="submitTest">Submit Test</button>
+            <div id="testFeedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
