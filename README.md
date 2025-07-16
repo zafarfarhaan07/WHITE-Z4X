@@ -193,6 +193,6 @@ If you'd like to contribute:
 
 **Zafar Farhaan Z.H**  
 Email: zfarhaan68@gmail.com  
-LinkedIn: https://in.linkedin.com/in/zafar-farhaan-a64756355
+LinkedIn: https://in.linkedin.com/in/zafar-farhaan
 
 
