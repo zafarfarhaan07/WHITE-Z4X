@@ -153,7 +153,7 @@ A bilingual translation web application that translates text between Hindi and E
 
 Install required packages:
 
-***bash***
+*** bash ***
 pip install streamlit pandas datasets transformers torch
 
 ### Run the Application
@@ -173,7 +173,7 @@ Acknowledgments
 
   6.Google Tesseract OCR
 
-###Author
+### Author
 Zafar Farhaan Z.H
 Email: zfarhaan68.com
 GitHub: github.com/zafarfarhaan07
