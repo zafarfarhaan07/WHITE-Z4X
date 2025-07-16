@@ -28,10 +28,10 @@ To explore or run a specific project, please switch to the appropriate branch.
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/zafarfarhaan07/WHITE-Z4X.git
 
 # Move into the project directory
-cd your-repo-name
+cd your-project-path
 
 # Switch to Machine Learning projects
 git checkout Machine-Learning-projects-using-small-datasets
